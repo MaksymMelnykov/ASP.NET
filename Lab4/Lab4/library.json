@@ -1,0 +1,43 @@
+{
+  "Library": {
+    "Books": [ "The Great Gatsby", "Harry Potter", "Hamlet", "The Odyssey" ],
+    "Users": {
+      "0": {
+        "name": "Maksym",
+        "surname": "Melnykov",
+        "age": "19",
+        "hobby": "Football"
+      },
+      "1": {
+        "name": "Ivan",
+        "surname": "Ivanov",
+        "age": "25",
+        "hobby": "Computer games"
+      },
+      "2": {
+        "name": "Oleksandr",
+        "surname": "Petrovskiy",
+        "age": "17",
+        "hobby": "Programming"
+      },
+      "3": {
+        "name": "Oksana",
+        "surname": "Zakharova",
+        "age": "22",
+        "hobby": "Cooking"
+      },
+      "4": {
+        "name": "Robert",
+        "surname": "Ayrapetyan",
+        "age": "19",
+        "hobby": "Gym"
+      },
+      "5": {
+        "name": "Artem",
+        "surname": "Klimov",
+        "age": "29",
+        "hobby": "Travelling"
+      }
+    }
+  }
+}
