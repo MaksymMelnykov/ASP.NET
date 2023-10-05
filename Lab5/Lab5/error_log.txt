@@ -1,0 +1,4 @@
+[05.10.2023 14:42:42] Exception: StatusCode cannot be set because the response has already started.
+----------------------------------------------------------------------------------------------------
+[05.10.2023 14:45:06] Exception: StatusCode cannot be set because the response has already started.
+----------------------------------------------------------------------------------------------------
