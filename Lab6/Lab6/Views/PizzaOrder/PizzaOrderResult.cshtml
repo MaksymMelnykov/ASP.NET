@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Lab6.Models
+@model List<Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pizza Order Result</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #000000;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th, td {
+        background-color: white;
+    }
+
+    h3 {
+        color: #007bff;
+        margin-top: -10px
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h2>Pizza Order Result</h2>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Size</th>
+                <th>Quantity</th>
+            </tr>
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@Model[i].Name</td>
+                    <td>@Model[i].Size</td>
+                    <td>@Model[i].Quantity</td>
+                </tr>
+            }
+        </table>
+        <p><h3>Thank you for your order!</h3></p>
+    </div>
+</body>
+</html>
