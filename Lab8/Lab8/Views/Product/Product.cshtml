@@ -1,0 +1,100 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Lab8.Models
+@model List<Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products</title>
+</head>
+<style>
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #1c1c1c;
+        border-radius: 25px;
+        box-shadow: 0 0 15px 5px grey;
+    }
+
+    h1 {
+        color: #333;
+        text-align:center;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    ul, table {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 20px;
+    }
+
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #f2f2f2;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Products List</h1>
+
+        <h2>List View</h2>
+        <ul>
+            @foreach (var product in Model)
+            {
+                <li>@product.Id. @product.Name - @product.Price$ (@product.CreatedDate)</li>
+            }
+        </ul>
+
+        <h2>Table View</h2>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Created Date</th>
+            </tr>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price$</td>
+                    <td>@product.CreatedDate</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
