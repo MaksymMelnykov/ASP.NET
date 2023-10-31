@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RGr/DHSVBnFX6Hfd4K5nZDfaIpQI1OPi44NWudxc/2zv5JoXmzzlPPmiBaLSZ1TDQIGPDY5WBDwFRszEy5RXgQ==",
+  "success": true,
+  "projectFilePath": "D:\\3 курс 2023 1 семестр\\Розробка web-застосунків на базі ASP.NET\\Lab9\\Lab9\\Lab9.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maxim\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

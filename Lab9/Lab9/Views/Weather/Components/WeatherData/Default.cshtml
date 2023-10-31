@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Lab9.Models
+@model Weather
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weather</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 800px;
+        flex-direction: column;
+        padding: 20px;
+        border: 2px solid #1c1c1c;
+        border-radius: 25px;
+        box-shadow: 0 0 15px 5px grey;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+</style>
+<body>
+<div class="container">
+        <h2>Weather in @Model.Name, @Model.Sys.Country, ID: @Model.Id</h2>
+        <h3>Temperature: @((Model.Main.Temp - 273.15).ToString("0.00"))°C</h3>
+        <h3>Feels like: @((Model.Main.Feels_like - 273.15).ToString("0.00"))°C</h3>
+        <h3>Pressure: @Model.Main.Pressure hPa</h3>
+        <h3>Humidity: @Model.Main.Humidity %</h3>
+        <h3>Sunrise: @Model.Sys.Sunrise</h3>
+        <h3>Sunset: @Model.Sys.Sunset</h3>
+        <h3>Wind speed: @Model.Wind.Speed m/s S</h3>
+        <h3>Wind deg: @Model.Wind.Deg °</h3>
+</div>
+</body>
+</html>
