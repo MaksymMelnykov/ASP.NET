@@ -1,0 +1,137 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Lab10.Models
+@model Consultation
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Validation Form</title>
+</head>
+<style>
+    .container {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 450px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    select {
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    span {
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .field-validation-error {
+        color: red;
+    }
+
+    input.input-validation-error {
+        border: 2px solid red;
+    }
+
+    select.input-validation-error {
+        border: 2px solid red;
+    }
+
+    input.valid {
+        border: 2px solid green;
+    }
+
+    select.valid {
+        border: 2px solid green;
+    }
+
+    .validation-summary-errors {
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <h2>Consultation Form</h2>
+            <label asp-for="FullName">Ім'я та Прізвище</label>
+            <input asp-for="FullName" type="text"/>
+            <span asp-validation-for="FullName"></span>
+            <br />
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="text" />
+            <span asp-validation-for="Email"></span>
+            <br />
+            <label asp-for="ConsultationDate">Бажана дата консультації</label>
+            <input asp-for="ConsultationDate" type="date" />
+            <span asp-validation-for="ConsultationDate"></span>
+            <br />
+            <label asp-for="SelectedProduct">Продукт</label>
+            <select asp-for="SelectedProduct">
+                <option></option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Основи">Основи</option>
+            </select>
+            <span asp-validation-for="SelectedProduct"></span>
+            <br />
+            <button type="submit">Зареєструватися</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"></script>
